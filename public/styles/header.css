@@ -1,7 +1,7 @@
 #main-header {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 50rem;
   justify-content: center;
   align-items: center;
   background-color: skyblue;
