@@ -1,0 +1,57 @@
+.old-tweet {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #545149;
+  padding: 1rem;
+}
+
+.old-tweet:hover {
+  box-shadow: 5px 10px #d8d8d8;
+}
+
+.old-tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.old-tweet-text {
+  height: 5rem;
+  border-bottom: 5px solid grey;
+  border-width: 100%;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  padding-left: 1%;
+}
+
+.old-tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+}
+
+.header-person{
+  display: flex;
+  justify-content: space-evenly;
+  width: 10%;
+}
+
+.old {
+  color: #4056A1;
+  margin: 0.3rem;
+}
+
+.old:hover {
+  color: rgb(190, 190, 11);
+  margin: 0.3rem;
+}
+
+header h3 {
+  color: #4056A1;
+  opacity: 0.5;
+}
+
+
+
+
+
+

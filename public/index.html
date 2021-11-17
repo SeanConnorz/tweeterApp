@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/tweet-log.css" type="text/css" />
     <script src="https://kit.fontawesome.com/feda09e3b4.js" crossorigin="anonymous"></script>
 
     <!-- External JS -->
@@ -34,7 +34,7 @@
       </span>
     </nav>
 
-    <header>
+    <header id="main-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -56,6 +56,27 @@
           </div>
         </form>
       </section>
+
+      <section>
+        <article class="old-tweet">
+          <header class="old-tweet-header">
+            <h5 class="header-person"><i class="far fa-meh fa-3x"></i>Name</h5>
+            <h3>@username</h3>
+          </header>
+            <div name="text" class="old-tweet-text">Lorem Ipsums</div>
+          <footer class="old-tweet-footer">
+            <h5>10 days ago</h5>
+            <ul>
+              <i class="old fas fa-flag"></i>
+              <i class="old fas fa-share"></i>
+              <i class="old fas fa-heart"></i>
+            </ul>
+          </footer>
+        </article>
+      </section>
     </main>
+
+    <section>
+    <script src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>

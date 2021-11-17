@@ -11,10 +11,22 @@
   justify-content: space-evenly;
 }
 
-label {
-  width: 100%;
+#tweet-text {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
   border-bottom: 5px solid grey;
   border-width: 100%;
+}
+
+#tweet-text:active {
+  background-color: #f4f1ec;
+  border: none;
+}
+
+label {
+  width: 100%;
   padding-bottom: 0.5rem;
 }
 
