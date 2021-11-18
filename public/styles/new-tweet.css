@@ -42,3 +42,12 @@ button {
   border: none;
   padding: 0.3rem;
 }
+
+.error {
+  color: rgb(255, 72, 0);
+  margin-left: 1%;
+}
+
+.tweet-form {
+  font-weight: 600;
+}

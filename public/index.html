@@ -49,7 +49,11 @@
     <main class="container">
       <section class="new-tweet">
         <form id='tweet-btn' class="tweet-container" method="POST" action="/tweets/">
-          <label for="tweet-text">What are you humming about?</label>
+          <label class="tweet-form" for="tweet-text">
+            What are you humming about?
+            <label class="tweet-form error">Field cannot be left blank!</label>
+            <label class="tweet-form error">Field has too many characters!</label>
+          </label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="tweet-counter">
             <button type="submit">Tweet</button>

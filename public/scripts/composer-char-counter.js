@@ -1,7 +1,3 @@
-$(document).ready(() => {
-  console.log($('body'));
-});
-
 let num = 140;
 const $tweetContainer = $('.tweet-container');
 const $body = $('body')
@@ -22,19 +18,6 @@ $tweetContainer.on('keydown',function(e) {
     if (num > 0) $counter.css('color', '#545149');
     $counter.val(num)
   }
-});
-
-const tweetValidation = (event) => {
-  if (num < 0) {
-    return event.preventDefault();
-  } else if (num === 140) {
-    return event.preventDefault();
-  }
-  event.preventDefault
-};
-
-$("#tweet-btn").on("submit", function(event) {
-  tweetValidation(event);
 });
 
 

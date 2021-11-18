@@ -13,7 +13,7 @@ const createTweetElement = (object) => {
       <h5 class="header-person"><i class="far fa-meh fa-3x"></i>${object.user.name}</h5>
       <h3>${object.user.handle}</h3>
     </header>
-      <div name="text" class="old-tweet-text">${object.content.text}</div>
+      <div name="text" class="old-tweet-text">${escape(object.content.text)}</div>
     <footer class="old-tweet-footer">
       <h5>${timeago.format(object.created_at)}</h5>
       <ul>
@@ -29,13 +29,14 @@ const createTweetElement = (object) => {
 
 $("#tweet-btn").on("submit", function(event) {
   event.preventDefault();
+  $('.error').css('display', 'none');
   if (num >= 0 && num !== 140) {
-    let data = $(this).serialize();
-    $.post('/tweets', data).then(loadTweets())
+    const data = $(this).serialize();
+    $.post('/tweets', data, () => loadTweets());
   } else if (num === 140) {
-    alert('Field cannot be left blank.');
+    $(".tweet-form").append(`<label class="tweet-form error">Field cannot be left blank!</label>`);
   } else {
-    alert('Field has too many characters.');
+    $(".tweet-form").append(`<label class="tweet-form error">Field has too many characters!</label>`);
   }
 });
 
@@ -46,5 +47,12 @@ const loadTweets = () => {
   });
 };
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+$('.error').css('display', 'none');
 
 
