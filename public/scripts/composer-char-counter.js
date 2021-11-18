@@ -7,8 +7,6 @@ const $tweetContainer = $('.tweet-container');
 const $body = $('body')
 
 $tweetContainer.on("keypress", function() {
-  console.log("works");
-
   const $counter = $(this).find('div').find('output');
 
   num--;
@@ -25,6 +23,23 @@ $tweetContainer.on('keydown',function(e) {
     $counter.val(num)
   }
 });
+
+const tweetValidation = (event) => {
+  if (num < 0) {
+    return event.preventDefault();
+  } else if (num === 140) {
+    return event.preventDefault();
+  }
+  event.preventDefault
+};
+
+$("#tweet-btn").on("submit", function(event) {
+  tweetValidation(event);
+});
+
+
+
+
 
  
 

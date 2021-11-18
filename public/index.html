@@ -16,12 +16,13 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-log.css" type="text/css" />
     <script src="https://kit.fontawesome.com/feda09e3b4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <!-- <script type="text/javascript" src="/scripts/client.js"></script> -->
   </head>
 
   <body>
@@ -47,7 +48,7 @@
     <!-- Page-specific (main) content here -->  
     <main class="container">
       <section class="new-tweet">
-        <form class="tweet-container" method="POST" action="/tweets/">
+        <form id='tweet-btn' class="tweet-container" method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="tweet-counter">
@@ -57,26 +58,11 @@
         </form>
       </section>
 
-      <section>
-        <article class="old-tweet">
-          <header class="old-tweet-header">
-            <h5 class="header-person"><i class="far fa-meh fa-3x"></i>Name</h5>
-            <h3>@username</h3>
-          </header>
-            <div name="text" class="old-tweet-text">Lorem Ipsums</div>
-          <footer class="old-tweet-footer">
-            <h5>10 days ago</h5>
-            <ul>
-              <i class="old fas fa-flag"></i>
-              <i class="old fas fa-share"></i>
-              <i class="old fas fa-heart"></i>
-            </ul>
-          </footer>
-        </article>
-      </section>
+      <section id="tweets-container"></section>
     </main>
 
     <section>
+    <script type="text/javascript" src="/scripts/client.js"></script>
     <script src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
