@@ -1,8 +1,14 @@
-#main-header {
+.main-header {
   display: flex;
   flex-direction: column;
   height: 50rem;
   justify-content: center;
   align-items: center;
   background-color: skyblue;
+  width: 100%;
+}
+
+div h2 {
+  display: flex;
+  justify-content: center;
 }

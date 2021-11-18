@@ -13,8 +13,23 @@
 
 .old-tweet-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+
+.old-tweet-header i {
+  flex-grow: 1;
+}
+
+.old-tweet-header h5 {
+  flex-grow: 1;
+}
+
+.old-tweet-header h3 {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-grow: 5;
+}
+
 
 .old-tweet-text {
   height: 5rem;
@@ -51,7 +66,6 @@ header h3 {
   color: #4056A1;
   opacity: 0.5;
 }
-
 
 
 

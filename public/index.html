@@ -35,37 +35,40 @@
       </span>
     </nav>
 
-    <header id="main-header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-    </header>
 
-    <!-- Page-specific (main) content here -->  
-    <main class="container">
-      <section class="new-tweet">
-        <form id='tweet-btn' class="tweet-container" method="POST" action="/tweets/">
-          <label class="tweet-form" for="tweet-text">
-            What are you humming about?
-            <label class="tweet-form error">Field cannot be left blank!</label>
-            <label class="tweet-form error">Field has too many characters!</label>
-          </label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="tweet-counter">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+    <div id="desktop-header">
+
+      <header id="media-header" class="main-header">
+        <div class="background">
+          <div>
+              <img src="/images/profile-hex.png"> 
           </div>
-        </form>
-      </section>
+          <br>
+          <div>
+              <h2>Your Name</h2>
+          </div>
+        </div>
+      </header>
 
-      <section id="tweets-container"></section>
-    </main>
-
-    <section>
+      <!-- Page-specific (main) content here -->  
+      <main class="container">
+        <section class="new-tweet">
+          <form id='tweet-btn' class="tweet-container" method="POST" action="/tweets/">
+            <label class="tweet-form" for="tweet-text">
+              What are you humming about?
+              <label class="tweet-form error">Field cannot be left blank!</label>
+              <label class="tweet-form error">Field has too many characters!</label>
+            </label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="tweet-counter">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+      </main>
+    </div>
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script src="/scripts/composer-char-counter.js"></script>
   </body>

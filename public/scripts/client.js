@@ -10,7 +10,8 @@ const createTweetElement = (object) => {
   let $tweet =  `
   <article class="old-tweet">
     <header class="old-tweet-header">
-      <h5 class="header-person"><i class="far fa-meh fa-3x"></i>${object.user.name}</h5>
+      <i class="far fa-meh fa-3x"></i>
+      <h5 class="header-person">${object.user.name}</h5>
       <h3>${object.user.handle}</h3>
     </header>
       <div name="text" class="old-tweet-text">${escape(object.content.text)}</div>
@@ -18,7 +19,7 @@ const createTweetElement = (object) => {
       <h5>${timeago.format(object.created_at)}</h5>
       <ul>
         <i class="old fas fa-flag"></i>
-        <i class="old fas fa-share"></i>
+        <i class="old fas fa-share"></i>  
         <i class="old fas fa-heart"></i>
       </ul>
     </footer>
