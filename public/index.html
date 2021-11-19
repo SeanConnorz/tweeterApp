@@ -31,7 +31,9 @@
       <span>tweeter</span>
       <span>
         Write a tweet
-        <i class="fas fa-angle-double-down"></i>      
+        <button class='compose'>
+          <i class="fas fa-angle-double-down"></i>      
+        </button>
       </span>
     </nav>
 
@@ -55,11 +57,10 @@
         <section class="new-tweet">
           <form id='tweet-btn' class="tweet-container" method="POST" action="/tweets/">
             <label class="tweet-form" for="tweet-text">
-              What are you humming about?
-              <label class="tweet-form error">Field cannot be left blank!</label>
-              <label class="tweet-form error">Field has too many characters!</label>
+              <label id="error-1" class="tweet-form error">Field cannot be left blank!</label>
+              <label id="error-2" class="tweet-form error">Field has too many characters!</label>
             </label>
-            <textarea name="text" id="tweet-text"></textarea>
+            <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
             <div class="tweet-counter">
               <button type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>

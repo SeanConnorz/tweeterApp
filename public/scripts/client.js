@@ -54,6 +54,10 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
+$('.compose').on('click', () => {
+    $('.new-tweet').css('display', 'flex');
+})
+
 $('.error').css('display', 'none');
 
 
