@@ -6,11 +6,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["screenshot of urls page while logged in"](https://github.com/SeanConnorz/tweeterApp/blob/master/public/images/Screenshot%20from%202021-11-19%2016-11-54.png)
+!["screenshot of home page with tweets"](https://github.com/SeanConnorz/tweeterApp/blob/master/public/images/Screenshot%20from%202021-11-19%2016-11-54.png)
 
-!["screenshot of urls page while logged off"](https://github.com/SeanConnorz/tweeterApp/blob/master/public/images/Screenshot%20from%202021-11-19%2016-11-56.png)
+!["screenshot of home page without tweets or tweet maker"](https://github.com/SeanConnorz/tweeterApp/blob/master/public/images/Screenshot%20from%202021-11-19%2016-11-56.png)
 
-!["screenshot of a new url page"](https://github.com/SeanConnorz/tweeterApp/blob/master/public/images/Screenshot%20from%202021-11-19%2016-11-59.png)
+!["screenshot of home page without tweets"](https://github.com/SeanConnorz/tweeterApp/blob/master/public/images/Screenshot%20from%202021-11-19%2016-11-59.png)
 
 ## Getting Started
 
