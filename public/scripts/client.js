@@ -45,6 +45,7 @@ const loadTweets = () => {
   $.ajax('/tweets', { method: 'GET' })
   .then(function(JSON) {
     renderTweets(JSON);
+    $('#tweet-btn').trigger("reset");
   });
 };
 
@@ -55,7 +56,7 @@ const escape = function (str) {
 };
 
 $('.compose').on('click', () => {
-    $('.new-tweet').css('display', 'flex');
+    $('.new-tweet').slideDown().css('display', 'flex');
 })
 
 $('.error').css('display', 'none');

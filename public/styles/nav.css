@@ -21,3 +21,17 @@ nav span {
   color: red;
 }
 
+.compose {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: compose;
+  animation-timing-function: ease;
+}
+
+@keyframes compose {
+  0% { transform: translateY(0); }
+  30%  { transform: translateY(50%); }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
