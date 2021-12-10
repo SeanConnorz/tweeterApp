@@ -67,6 +67,11 @@ header h3 {
   opacity: 0.5;
 }
 
+#tweets-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 
 
 

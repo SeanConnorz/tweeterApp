@@ -1,8 +1,14 @@
-const renderTweets = (object) => {
+$(document).ready(function() {
+  loadTweets();
+});
+
+const renderTweets = (tweets) => {
   let HTML = '';
-  for (let item of object) {
-    HTML = createTweetElement(item);
+  console.log(tweets);
+  for (const item of tweets) {
+    HTML += createTweetElement(item);
   }
+  $('#tweets-container').empty();
   $('#tweets-container').prepend(HTML);
 }
 
@@ -45,7 +51,6 @@ const loadTweets = () => {
   $.ajax('/tweets', { method: 'GET' })
   .then(function(JSON) {
     renderTweets(JSON);
-    $('#tweet-btn').trigger("reset");
   });
 };
 
