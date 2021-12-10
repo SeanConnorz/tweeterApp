@@ -2,6 +2,7 @@ const $tweetContainer = $('.tweet-container');
 const $body = $('body')
 let num;
 
+// updates character counter everytime a word is written in tweet form
 $tweetContainer.on("keypress", function() {
   const $counter = $(this).find('div').find('output');
   const $characterCount = $('#tweet-text').val().length;
@@ -12,6 +13,7 @@ $tweetContainer.on("keypress", function() {
   $counter.val(num);
 })
 
+// updates character counter on backspace
 $tweetContainer.on('keydown',function(e) {
   if(e.which == 8) {
     const $characterCount = $('#tweet-text').val().length;
@@ -24,6 +26,7 @@ $tweetContainer.on('keydown',function(e) {
   }
 });
 
+// Updates character counter every 0.5 seconds
 const checkCounter = () => {
   setTimeout(() => {
     const $characterCount = $('#tweet-text').val().length;
