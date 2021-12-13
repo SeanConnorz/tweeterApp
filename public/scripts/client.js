@@ -2,6 +2,7 @@ $(document).ready(function() {
   loadTweets();
 });
 
+// Empties tweets then appends new tweet data
 const renderTweets = (tweets) => {
   let HTML = '';
   console.log(tweets);
@@ -12,6 +13,7 @@ const renderTweets = (tweets) => {
   $('#tweets-container').prepend(HTML);
 }
 
+// Html template to load
 const createTweetElement = (object) => {
   let $tweet =  `
   <article class="old-tweet">
@@ -34,12 +36,14 @@ const createTweetElement = (object) => {
   return $tweet;
 };
 
+// Calls and renders tweets if their valid if their not valid an error will be displayed
 $("#tweet-btn").on("submit", function(event) {
   event.preventDefault();
   $('.error').css('display', 'none');
   if (num >= 0 && num !== 140) {
     const data = $(this).serialize();
     $.post('/tweets', data, () => loadTweets());
+    $('#tweet-text').val("");
   } else if (num === 140) {
     $(".tweet-form").append(`<label class="tweet-form error">Field cannot be left blank!</label>`);
   } else {
@@ -47,6 +51,7 @@ $("#tweet-btn").on("submit", function(event) {
   }
 });
 
+// Gets data from ajax post request and passes it into render tweets
 const loadTweets = () => {
   $.ajax('/tweets', { method: 'GET' })
   .then(function(JSON) {
@@ -60,6 +65,7 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
+// displays tweet form when arrow icon is clicked
 $('.compose').on('click', () => {
     $('.new-tweet').slideDown().css('display', 'flex');
 })
